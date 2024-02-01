@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div>
+    <h3>edit this message</h3>
+    <form  method="POST" action="">
+        {% csrf_token %}
+        <textarea name="body" id="body">{{ message.body }}</textarea>
+        <input type="submit" value="Save">
+    </form>
+    
+</div>
+
+{% endblock %}
