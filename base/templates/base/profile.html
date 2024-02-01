@@ -1,4 +1,5 @@
 {% extends 'main.html' %}
+
 {% block content %}
 
 <style>
@@ -7,25 +8,18 @@
         grid-template-columns: 1fr 3fr 1fr;
     }
 </style>
-
-
-
-
-
 <div class="home-container">
     <div>
         {% include 'base/topics_component.html' %}
     </div>
     <div>
-        <h3>{{rooms_count}} rooms available</h3>
-        <hr>
+        <h1>{{user.username}}</h1>
         {% include 'base/feed_component.html' %}
     </div>
-
     <div>
-    {% include 'base/activity_component.html' %}
+        {% include 'base/activity_component.html' %}
     </div>
-    
-    
+
+
 </div>
 {% endblock %}

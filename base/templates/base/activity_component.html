@@ -1,0 +1,12 @@
+<div>
+    <h3>Recennt Activities</h3>
+    <hr>
+    {% for recent_message in recent_messages %}
+    <div>
+        <a href="{% url 'profileurl' recent_message.user.id %}">@{{recent_message.user}} </a>
+        <p>{{recent_message.room}} ({{recent_message.created|timesince}})</p>
+        <p>Said: "{{recent_message}}"</p>
+        <hr>
+    </div>
+    {% endfor %}
+</div>
