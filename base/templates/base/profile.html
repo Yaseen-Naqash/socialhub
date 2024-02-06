@@ -22,12 +22,14 @@
           <div class="profile__info">
             <h3>{{user.username}}</h3>
             <p><a href="{% url 'profileurl' user.id %}">@{{user.username}}</a></p>
-            <a href="edit-user.html" class="btn btn--main btn--pill">Edit Profile</a>
+            {% if request.user == user %}
+            <a href="{% url 'edituserurl' %}" class="btn btn--main btn--pill">Edit Profile</a>
+            {% endif %}
           </div>
           <div class="profile__about">
             <h3>About</h3>
             <p>
-              i just didnt import bio for users in models
+              bios not imported into project yet
             </p>
           </div>
         </div>

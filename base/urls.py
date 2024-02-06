@@ -13,6 +13,9 @@ urlpatterns = [
     path('logout/',views.logOut,name='logouturl'),
     path('register/',views.registerPage,name='registerurl'),
     path('profile/<str:pk>/',views.profile,name='profileurl'),
+    path('edit-profile/',views.editUser,name='edituserurl'),
+    path('topics/',views.topics,name='topicsurl'),
+    path('activity/',views.activity,name='activityurl'),
 
 
 ]
